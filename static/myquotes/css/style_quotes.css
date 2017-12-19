@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    padding-bottom: 30px;
+    color: Green;
+    display: inline;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+#container{
+    width: 650px;
+    display: table;
+    margin: 0 auto;
+    padding: 20px 0px 20px 20px;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+#logout{
+    margin-left: 600px;
+}
+
+#left{
+    display: inline-block;
+    width: 360px;
+    padding: 10px 0px 10px 10px;
+    margin-left: 15px;
+}
+
+#right{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 60px;
+    padding: 10px;
+}
+
+#favorites{
+    width: 350px;
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 1px solid black;
+}
+
+#quotes{
+    width: 350px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 1px solid black;
+}
+
+.single{
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#add{
+    margin-top: 20px;
+}
+
+#text, #message{
+    margin-bottom: 10px;
+}
+
+#message_lab{
+    vertical-align: top;
+    padding-right: 13px;
+}
+
+#btn{
+    margin-left: 160px;
+    margin-bottom: 10px;
+}
+
+.error{
+    color: red
+}

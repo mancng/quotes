@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    padding-bottom: 30px;
+    color: Green;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+#container{
+    width: 650px;
+    display: table;
+    margin: 0 auto;
+    padding: 20px 0px 20px 20px;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+ul{
+    margin-left: 450px;
+    display: inline;
+
+}
+ul li{
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+.red{
+    color: red;
+}
