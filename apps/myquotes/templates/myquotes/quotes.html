@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myquotes/css/style_quotes.css' %}">
+    <title>Quotes</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome, {{user.alias}} </h1>
+        <a id="logout" href="/logout">Logout</a>
+        <div id="left">
+            <h2>Quotable Quotes</h2>
+            <div id="quotes">
+                {% for quote in quotes%}
+                <div class="single">
+                    <p>{{quote.quoted_by}}: {{quote.content}}</p>
+                    <span>Posted by <a href="users/{{quote.posted_by.id}}">{{quote.posted_by.alias}}</a></span>
+                    <a href="/add_fav/{{quote.id}}"><button>Add to My List</button></a>
+                </div>
+                {% endfor %}
+            </div>
+        </div><!-- end of left div -->
+
+        <div id="right">
+            <h2>Your Favorites</h2>
+
+            <div id="favorites">
+                {% for fav in fav_quotes %}
+                <div class="single">
+                    <p>{{fav.quoted_by}}: {{fav.content}}</p>
+                    <span>Posted by <a href="users/{{fav.posted_by.id}}">{{fav.posted_by.alias}}</a></span>
+                    <a href="/remove_fav/{{fav.id}}"><button>Remove From My List</button></a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div id="add">
+                <h2>Contribute a Quote:</h2>
+                <form action="/add_quote", method="POST">
+                {% csrf_token %}
+                    <label for="quoted_by">Quoted By: </label>
+                    <input id="text" type="text" name="quoted_by"><br>
+                    <label id="message_lab" for="message">Message: </label>
+                    <textarea name="message" id="message" cols="20" rows="8"></textarea><br>
+                    <input id="btn" type="submit" value="Submit">
+                </form>
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class='error'>***{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div><!-- end of right div -->
+    </div>
+</body>
+</html>

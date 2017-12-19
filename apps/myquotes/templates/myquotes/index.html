@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myquotes/css/style_index.css' %}">
+    <title>Main</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome!</h1>
+        <div id="left">
+            <h3>Registration Form</h3>
+            <form class=form action='/register_user' method='POST'>
+            {% csrf_token %}
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name">
+                <br>
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name">
+                <br>
+                <label for="alias">Alias</label>
+                <input type="text" id="alias" name="alias">
+                <br>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <p class="note">*Password should be at least 8 characters</p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <label for="confirm_pass">Confirm Password</label>
+                <input type="password" id="confirm_pass" name="confirm_pass">
+                <br>
+                <label for="birthday">Date of Birth</label>
+                <input type="date" id="date" name="birthday" max="{{date}}">
+                <input type="submit" class='btn' value="Register">
+            </form>    
+        </div><!-- end of left div -->
+        <div id="right">
+            <h3>Log in</h3>
+            <form class=form action='/login_user' method='POST'>
+            {% csrf_token %}
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <label for="confirm_pass">Confirm Password</label>
+                <input type="password" id="confirm_pass" name="confirm_pass">
+                <br>
+                <input type="submit" class='btn' value="Login">
+            </form>
+        </div><!-- end of right div -->
+        {% if messages %}
+            {% for message in messages %}
+                <p class='error'>***{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    </div><!-- end of container div -->
+</body>
+</html>
