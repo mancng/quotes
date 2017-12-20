@@ -15,26 +15,26 @@
             <h3>Registration Form</h3>
             <form class=form action='/register_user' method='POST'>
             {% csrf_token %}
-                <label for="first_name">First Name</label>
+                <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name">
                 <br>
-                <label for="last_name">Last Name</label>
+                <label for="last_name">Last Name:</label>
                 <input type="text" id="last_name" name="last_name">
                 <br>
-                <label for="alias">Alias</label>
+                <label for="alias">Alias:</label>
                 <input type="text" id="alias" name="alias">
                 <br>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email">
+                <label for="email">Email:</label>
+                <input type="text" class="email" name="email">
                 <br>
                 <p class="note">*Password should be at least 8 characters</p>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <label for="password">Password:</label>
+                <input type="password" class="password" name="password">
                 <br>
-                <label for="confirm_pass">Confirm Password</label>
-                <input type="password" id="confirm_pass" name="confirm_pass">
+                <label for="confirm_pass">Confirm Password:</label>
+                <input type="password" class="confirm_pass" name="confirm_pass">
                 <br>
-                <label for="birthday">Date of Birth</label>
+                <label for="birthday">Date of Birth:</label>
                 <input type="date" id="date" name="birthday" max="{{date}}">
                 <input type="submit" class='btn' value="Register">
             </form>    
@@ -43,14 +43,14 @@
             <h3>Log in</h3>
             <form class=form action='/login_user' method='POST'>
             {% csrf_token %}
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email">
+                <label for="email">Email:</label>
+                <input type="text" class="email" name="email">
                 <br>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <label for="password">Password:</label>
+                <input type="password" class="password" name="password">
                 <br>
-                <label for="confirm_pass">Confirm Password</label>
-                <input type="password" id="confirm_pass" name="confirm_pass">
+                <label for="confirm_pass">Confirm Password:</label>
+                <input type="password" class="confirm_pass" name="confirm_pass">
                 <br>
                 <input type="submit" class='btn' value="Login">
             </form>
