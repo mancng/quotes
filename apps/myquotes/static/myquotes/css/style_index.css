@@ -41,7 +41,6 @@ h1{
 
 .form{
     margin: 20px;
-    width: 300px;
 }
 
 
@@ -65,4 +64,45 @@ input[type=text]{
 
 .btn{
     margin-left: 250px;
+}
+
+#first_name, #last_name{
+    margin-left: 60px;
+    width: 150px;
+}
+
+#last_name{
+    margin-left: 60px;
+    width: 150px;
+}
+
+#first_name{
+    margin-left: 59px;
+    width: 150px;
+}
+
+#alias{
+    margin-left: 96px;
+    width: 150px;
+}
+
+.email{
+    margin-left: 92px;
+    width: 150px;
+}
+
+.password{
+    margin-left: 68px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.confirm_pass{
+    margin-left: 10px;
+    width: 150px;
+}
+
+#date{
+    margin-left: 45px;
+    margin-top: 5px;
 }
