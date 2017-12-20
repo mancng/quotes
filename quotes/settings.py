@@ -24,8 +24,10 @@ SECRET_KEY = 'pgmx7$l%1)yvpa1t%#wkzkv-k%r*v_aj-uf5!xo)6h=5+djmz3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = ['34.210.226.176']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
